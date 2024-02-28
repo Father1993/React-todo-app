@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from './TodoForm.module.css';
+import Button from '../UI/Button';
 
 function TodoForm({ addTodo }) {
     // Контролируемое поле ввода
@@ -22,7 +23,9 @@ function TodoForm({ addTodo }) {
                     // Меняем состояние при вводе в input
                     onChange={(e) => setText(e.target.value)}
                 />
-                <button type="submit">Submit</button>
+                <Button type="submit" title="Submit">
+                    Submit
+                </Button>
             </form>
         </div>
     );
